@@ -4,6 +4,11 @@ import BandInput from './BandInput';
 import { connect } from 'react-redux'
 
 class BandsContainer extends Component {
+  
+  
+  renderBands = () => this.props.bands.map((band, id) => <Band delete={this.props.delete} key={id} text={todo} />)
+  
+  
   render() {
     return (
       <div>
